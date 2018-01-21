@@ -73,6 +73,6 @@ Vagrant.configure("2") do |config|
   SHELL
 
   config.vm.provision "shell", run: "always", inline: <<-SHELL
-    java -jar /shared_apps/hunger/target/hunger-0.1-SNAPSHOT.jar server &
+    java -jar /shared_apps/hunger/target/hunger-0.1-SNAPSHOT.jar server /shared_apps/hunger/config.yml &
   SHELL
 end
